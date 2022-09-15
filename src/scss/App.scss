@@ -1,2 +1,97 @@
 @forward './global';
 @forward './flex-grid';
+@forward './abstracts/variables';
+
+.first-game {
+    text-align: center;
+    padding: 2rem;
+    border: 5px solid #0FC909;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+}
+
+.first-game>span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: green;
+}
+
+.first-game>p {
+    font-size: 1.5rem;
+}
+
+.expired-notice {
+    text-align: center;
+    padding: 2rem;
+    border: 5px solid #ff0000;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+}
+
+.expired-notice>span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: red;
+}
+
+.expired-notice>p {
+    font-size: 1.5rem;
+}
+
+.show-counter {
+    padding: 0.5rem;
+}
+
+.show-counter .countdown-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 1.75rem;
+    padding-top: 3%;
+    padding-bottom: 10%;
+
+    border: 5px solid #000;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.show-counter .countdown {
+    line-height: 7rem;
+    padding: 0 0.75rem 0 0.75rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.show-counter .countdown.danger {
+    color: #ff0000;
+}
+
+.show-counter .countdown>p {
+    margin: 0;
+}
+
+.show-counter .countdown>span {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    line-height: 1rem;
+}
+
+.img-winner {
+    --size: 200px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 30px;
+    overflow: hidden;
+
+
+
+
+    img {
+        border-radius: 0px;
+    }
+}

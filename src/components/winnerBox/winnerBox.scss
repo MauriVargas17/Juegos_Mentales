@@ -1,14 +1,26 @@
 @use '../../scss/abstracts/' as *;
 
-.box {
-    padding: 5px 30px 20px;
-    border-radius: 5px;
+.winner-box {
+    padding: 50px 0px 0px 200px;
+    border-radius: 50px;
+
     //was $mainBg
     background-color: $boxColor;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
+    &__img {
+        --size: 10px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: $borderRadius;
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
     &-purple {
-        background-color: $purple;
+        background-color: #000;
         color: $white;
     }
 

@@ -1,13 +1,25 @@
 import React from 'react'
 import './topnav.scss'
-import UserInfo from '../user-info/UserInfo'
+import { useNavigate } from "react-router-dom"
 import { data } from '../../constants'
 import { useContext } from "react";
 import images from '../../constants/images'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../../store/slices/AuthSlice'
 
 const TopNav = () => {
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const user = useSelector((state) => state.auth.isAuthenticated)
+
     const openSidebar = () => {
         document.body.classList.add('sidebar-open')
+    }
+
+    const logoutRoot = () => {
+        dispatch(logout())
+        navigate('/')
     }
 
     return (
@@ -16,9 +28,11 @@ const TopNav = () => {
                 {/* <UserInfo /> */}
                 <img className="topnav__img" src={images.logo2022}></img>
             </div>
-            <div className="sidebar-toggle" onClick={openSidebar}>
-                <i className='bx bx-menu-alt-right'></i>
-            </div>
+            {user &&
+                <div className="sidebar-toggle" onClick={logoutRoot}>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            }
         </div>
     )
 }

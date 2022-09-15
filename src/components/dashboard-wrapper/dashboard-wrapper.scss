@@ -2,13 +2,16 @@
 
 .dashboard-wrapper {
     @include flex(stretch);
+
     @include tablet {
         flex-direction: column;
     }
 
     &__main {
         flex-grow: 1;
-        padding-right: $sideBarWidth;
+        padding-right: 0;
+        padding-left: 5%;
+
 
         @include tablet {
             padding-right: 0;

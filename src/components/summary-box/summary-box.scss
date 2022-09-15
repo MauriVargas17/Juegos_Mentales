@@ -4,8 +4,11 @@
     @include flex(stretch, flex-start);
 
 
+
     &__chart {
         width: 40%;
+
+
 
         &__value {
             margin-top: -30%;
@@ -18,10 +21,13 @@
         @include flex(flex-start, space-between);
         flex-direction: column;
 
+
         &__title {
-            font-size: $fontSizeMedium;
+            font-size: $fontSizeLarge;
             font-weight: 700;
             line-height: 1.2;
+            padding-top: 8%;
+
 
 
             span {

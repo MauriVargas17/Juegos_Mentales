@@ -1,6 +1,7 @@
 @use '../../scss/abstracts/' as *;
 
 .topnav {
+
     @include flex(center, space-between);
     margin-bottom: $spacing;
     color: $txtColor;

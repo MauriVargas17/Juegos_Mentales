@@ -41,35 +41,25 @@ const SummaryBox = ({ item }) => {
         <Box>
             <div className='summary-box'>
                 <div className="summary-box__info">
-                    <div className="summary-box__info__title">
-                        <div>{item.name}</div>
-                        {/* <span>{item.subtitle}</span> */}
-                        <span></span>
-                        <div className="summary-box__info__img">
-                            <img src={item.image} alt="" />
-                        </div>
+                    <div className="summary-box__info__img">
+                        <img src={item.image} alt="" />
                     </div>
 
-                    <div className="summary-box__info__value">
+
+
+                    {/* <div className="summary-box__info__value">
                         {item.score}
-                    </div>
+                    </div> */}
                 </div>
 
-                <div className="summary-box__chart">
-                    <CircularProgressbarWithChildren
-                        value={item.performance}
-                        strokeWidth={10}
-                        styles={buildStyles({
-                            pathColor: pickColor(),
-                            trailColor: 'transparent',
-                            strokeLinecap: 'round'
-                        })}
-                    >
-                        <div className="summary-box__chart__value">
-                            {item.performance}%
-                        </div>
-                    </CircularProgressbarWithChildren>
+                <div className="summary-box__info__title">
+                    <div>{item.name}</div>
+                    {/* <span>{item.subtitle}</span> */}
+                    <span></span>
+
                 </div>
+
+
             </div>
         </Box>
     )
